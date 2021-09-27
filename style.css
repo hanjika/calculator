@@ -1,0 +1,105 @@
+html {
+    height: 100vh;
+}
+
+body {
+    text-align: center;
+    height: 100vh;
+    font-size: 25px;
+    background-size: contain;
+    font-family: 'PT Sans', sans-serif;
+}
+
+header, main {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 80% 10%;
+}
+
+main {
+    height: 80vh;
+}
+
+header > button {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: none;
+}
+
+#img1 {
+    background-color: red;
+    color: white;
+}
+
+#img2 {
+    background-color: white;
+    color: black;
+}
+
+#img3 {
+    background-color: rgb(250, 152, 168);
+    color: black;
+}
+
+/*header {
+    align-content: center;
+}*/
+
+.calculator {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: gray;
+    border-radius: 25px;
+    display: grid;
+    align-content: space-around;
+    //grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+#display {
+    grid-row: 1;
+    background-color: black;
+    color: white;
+    margin: 6% 8% 6% 8%;
+    height: 70px;
+    text-align: right;
+    letter-spacing: 0.3em;
+}
+
+.all-buttons {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0 5% 5% 5%;
+}
+
+.all-buttons > button {
+    //background-color: white;
+    //border-radius: 10px;
+    margin: 0;
+    font-size: 25px;
+    height: 50px;
+}
+
+@media screen and (max-width: 520px) {
+    h1 {
+        font-size: 100%;
+    }
+    
+    .all-buttons {
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        margin: 0 5% 5% 5%;
+    }
+
+    .all-buttons > button {
+        //background-color: white;
+        //border-radius: 10px;
+        margin: 0;
+        font-size: 15px;
+        height: 40px;
+    }
+}
