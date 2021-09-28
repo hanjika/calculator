@@ -102,8 +102,6 @@ function pressKey(e) {
         value = "(";
     } else if (e.keyCode === 41) {
         value = ")";
-    } else if (e.keyCode === 8) {
-        value = "DEL";
     }
 
     if (value !== "") {
