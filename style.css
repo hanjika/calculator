@@ -6,99 +6,176 @@ body {
     text-align: center;
     height: 100vh;
     font-size: 25px;
-    background-size: contain;
+    background-size: cover;
     font-family: 'PT Sans', sans-serif;
 }
 
-header, main {
+header {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 10% 80% 10%;
 }
 
 main {
-    height: 80vh;
+    display: grid;
+    grid-template-columns: 10% 35% 10% 35% 10%;
+    margin: 2% 0 4% 0;
+    padding-bottom: 5%;
+}
+
+button, button:active {
+    border: none;
+}
+
+button {
+    font-family: 'PT Sans', sans-serif;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 header > button {
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    border: none;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+#img2, #img3 {
+    color: black;
+}
+
+#white, #white2, #black, #black2, #img1 {
+    color: white;
+}
+
+#white {
+    background-color: #219ebc;
+}
+
+#white2 {
+    background-color: #d62828;
+}
+
+#black {
+    background-color: #001d3d;
+}
+
+#black2 {
+    background-color: #800f2f
 }
 
 #img1 {
-    background-color: red;
-    color: white;
+    background-color: #d93b43;
 }
 
 #img2 {
-    background-color: white;
-    color: black;
+    background-color: #38b000;
 }
 
 #img3 {
-    background-color: rgb(250, 152, 168);
-    color: black;
+    background-color: #eea198;
 }
 
-/*header {
-    align-content: center;
-}*/
-
 .calculator {
-    grid-area: 2 / 2 / 3 / 3;
-    background-color: gray;
-    border-radius: 25px;
-    display: grid;
-    align-content: space-around;
-    //grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr;
+    grid-column: 2;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    height: max-content;
+}
+
+.history {
+    grid-column: 4 / 5;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.refresh {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 100px;
+    border: none;
 }
 
 #display {
-    grid-row: 1;
     background-color: black;
     color: white;
-    margin: 6% 8% 6% 8%;
     height: 70px;
     text-align: right;
     letter-spacing: 0.3em;
+    padding: 5%;
 }
 
 .all-buttons {
-    grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    margin: 0 5% 5% 5%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
 }
 
 .all-buttons > button {
-    //background-color: white;
-    //border-radius: 10px;
+    background-color: #d93b43;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     margin: 0;
     font-size: 25px;
     height: 50px;
 }
 
+button:hover {
+    opacity: 0.8;
+}
+
+img {
+    width: 40px;
+}
+
 @media screen and (max-width: 520px) {
-    h1 {
-        font-size: 100%;
+    h2, p {
+        font-size: 80%;
     }
-    
-    .all-buttons {
-        grid-row: 2;
+
+    .refresh {
+        font-size: 60%;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    header > button {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+
+    main {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        margin: 0 5% 5% 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 40px;
+        justify-items: center;
+        margin: 10% 0 10% 0;
+    }
+
+    .calculator {
+        grid-column: 1;
+        grid-row: 1;
+        width: 60%;
+    }
+
+    .history {
+        grid-column: 1;
+        grid-row: 2;
+        width: 60%;
     }
 
     .all-buttons > button {
-        //background-color: white;
-        //border-radius: 10px;
-        margin: 0;
         font-size: 15px;
         height: 40px;
     }
