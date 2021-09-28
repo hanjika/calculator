@@ -279,7 +279,6 @@ function changeBackground(e) {
     } else if (button.getAttribute("id") === "img2") {
         button.removeAttribute("id", "img2");
         document.body.style.backgroundImage = "url(" + backgrounds[1] +")";
-        document.body.style.backgroundSize = "cover";
         document.body.style.color = "#E55D4D";
         display.style.backgroundColor = "black";
         display.style.color = "white";
