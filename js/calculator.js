@@ -6,7 +6,7 @@ document.querySelector("body").insertBefore(header, document.querySelector("main
 // button to change background
 
 const bgButton = document.createElement("button");
-bgButton.innerHTML = "Change<br>Background";
+bgButton.innerHTML = "Change<br>Theme";
 header.appendChild(bgButton);
 bgButton.classList.add("background-button");
 bgButton.setAttribute("id", "white");
