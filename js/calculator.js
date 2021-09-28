@@ -216,7 +216,7 @@ function changeBackground(e) {
 
 
     if (button.getAttribute("id") === "white") {
-        button.removeAttribute("id", "img3");
+        button.removeAttribute("id", "white");
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
         for (let elem of btns) {
