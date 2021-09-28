@@ -1,10 +1,5 @@
-html {
-    height: 100vh;
-}
-
 body {
     text-align: center;
-    height: 100vh;
     font-size: 25px;
     background-size: cover;
     font-family: 'PT Sans', sans-serif;
@@ -64,7 +59,7 @@ h2 {
 }
 
 #black2 {
-    background-color: #800f2f
+    background-color: #ff6200;
 }
 
 #img1 {

@@ -49,7 +49,8 @@ for (const elem of buttonArray) {
     button.addEventListener("click", buttonClick);
 }
 
-document.addEventListener('keypress', pressKey);
+document.addEventListener("keypress", pressKey);
+document.addEventListener("keyup", backspace);
 
 /* HISTORY */
 
@@ -102,6 +103,18 @@ function pressKey(e) {
     } else if (e.keyCode === 41) {
         value = ")";
     } else if (e.keyCode === 8) {
+        value = "DEL";
+    }
+
+    if (value !== "") {
+        processInput(value);
+    }
+}
+
+function backspace(e) {
+    let value = "";
+
+    if (e.keyCode === 8) {
         value = "DEL";
     }
 
@@ -236,8 +249,8 @@ function changeBackground(e) {
     } else if (button.getAttribute("id") === "black") {
         button.removeAttribute("id", "black");
         document.body.style.color = "white";
-        display.style.backgroundColor = "#ff4d6d";
-        history.style.backgroundColor = "#ff4d6d";
+        display.style.backgroundColor = "#453a6f";
+        history.style.backgroundColor = "#453a6f";
         for (let elem of btns) {
             elem.setAttribute("id", "black2")
         }
