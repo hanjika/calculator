@@ -133,7 +133,6 @@ function processInput(value) {
         if (value === "C") {
             display.innerText = display.innerText.replace(display.innerText, "");
             str = str.toString().replace(str, "");
-            console.log(str);
             wasEqual = false;
         } else if (value === "=") {
             const result = computeResult(str);
