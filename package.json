@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/hanjika/calculator/issues"
   },
-  "homepage": "https://github.com/hanjika/calculator#readme",
+  "homepage": "https://hanjika.github.io/calculator/",
   "devDependencies": {
     "gh-pages": "^3.2.3",
     "parcel": "^2.0.0"
