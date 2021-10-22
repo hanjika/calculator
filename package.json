@@ -1,0 +1,24 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A simple calculator that works when you click on the buttons or press the corresponding keys on your keyboard. The calculation history is recorded and multiple themes are available.",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "rm -rf dist/* && cp src/Images/ dist/Images/ -R && parcel build --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanjika/calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanjika/calculator/issues"
+  },
+  "homepage": "https://github.com/hanjika/calculator#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  }
+}
